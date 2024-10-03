@@ -1,0 +1,293 @@
+/* General Styles */
+body {
+    background: linear-gradient(120deg, #ff7e5f, #feb47b, #12c2e9, #c471ed, #f64f59);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header {
+    /* background: linear-gradient(120deg, #6a11cb, #2575fc); */
+    /* background: linear-gradient(120deg, #004e92, #000428); */
+    /* background: linear-gradient(120deg, #ff7e5f, #feb47b, #12c2e9, #c471ed, #f64f59); */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    animation: fadeInDown 1s ease;
+}
+
+.profile-pic {
+    width: 200px;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    /* animation: pulse 2s infinite; */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with transparency */
+}
+
+.modal-content {
+    background-color: white;
+    color: black;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float:left;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+/* Section Styles */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.colorfule-bg {
+    color: white;
+}
+
+/* Projects Section */
+.project-card,
+a {
+    text-decoration: none;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background-color: #ffedcc;
+}
+
+/* Skills Section */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    width: 80%;
+    height: 20px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    transition: width 1s ease;
+}
+
+/* Call-to-Action Buttons */
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.cta-button {
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn1 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+
+button {
+    position: fixed;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    animation: pulse 2s infinite;
+}
+button:hover {
+    background-color: #feb47b;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #feb47b;
+}
+
+/* Parallax Section  */
+.parallax-section {
+    background: url('assets/parallax-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
+}
+
+.abt {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* For the Parallax Background Section */
+footer {
+    background: linear-gradient(120deg, #004080, #0f2027);
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #feb47b;
+}
+
+/* Center content within the footer */
+footer .contact-info {
+    margin-top: 10px;
+
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+
+/* Animation to make the gradient move */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
