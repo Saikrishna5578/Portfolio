@@ -4,7 +4,6 @@ body {
     background-size: 300% 300%;
     animation: gradientBG 15s ease infinite;
     font-family: 'Times New Roman', Times, serif;
-    font-size: large;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,9 +11,6 @@ body {
 }
 
 header {
-    /* background: linear-gradient(120deg, #6a11cb, #2575fc); */
-    /* background: linear-gradient(120deg, #004e92, #000428); */
-    /* background: linear-gradient(120deg, #ff7e5f, #feb47b, #12c2e9, #c471ed, #f64f59); */
     color: white;
     text-align: center;
     padding: 20px;
@@ -29,11 +25,11 @@ header {
     animation: fadeInDown 1s ease;
 }
 
+/* Responsive Profile Picture */
 .profile-pic {
-    width: 200px;
+    width: 150px;
     border-radius: 100%;
     margin-bottom: 15px;
-    /* animation: pulse 2s infinite; */
 }
 
 nav ul {
@@ -42,8 +38,8 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -55,36 +51,28 @@ nav ul li a {
 /* Modal styles */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     background-color: rgba(0, 0, 0, 0.5);
-    /* Black background with transparency */
 }
 
 .modal-content {
     background-color: white;
     color: black;
     margin: 15% auto;
-    /* 15% from the top and centered */
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    /* Could be more or less, depending on screen size */
     max-width: 400px;
 }
 
 .close {
     color: #aaa;
-    float:left;
+    float: right;
     font-size: 30px;
     font-weight: bold;
 }
@@ -94,7 +82,6 @@ nav ul li a {
     color: red;
     cursor: pointer;
 }
-
 
 /* Section Styles */
 section {
@@ -160,13 +147,13 @@ a {
 }
 
 /* Call-to-Action Buttons */
-.btn {
+.btn, .btn1 {
     display: flex;
     justify-content: flex-end;
     gap: 20px;
 }
 
-.cta-button {
+.cta-button, .cta-button1 {
     background-color: #ff7e5f;
     color: white;
     padding: 10px 20px;
@@ -175,13 +162,31 @@ a {
     transition: background-color 0.3s;
 }
 
-.btn1 {
-    display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+
+/* Contact Me Button */
+#contactButton {
+    position: fixed; /* Keeps the button fixed on screen */
+    top: 20px; /* Adjusts distance from the top */
+    right: 20px; /* Adjusts distance from the right */
+    background-color: #ff7e5f;
+    color: white;
+    padding: 10px 20px;
+    font-size: larger;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    z-index: 1000; /* Ensures button stays above other elements */
+    animation: pulse 2s infinite;
 }
 
+#contactButton:hover {
+    background-color: #feb47b;
+    cursor: pointer;
+}
 
+/* Fixed Button */
 button {
     position: fixed;
     border: none;
@@ -195,41 +200,33 @@ button {
     transition: background-color 0.3s;
     animation: pulse 2s infinite;
 }
-button:hover {
-    background-color: #feb47b;
-    cursor: pointer;
-}
 
-.cta-button:hover {
+button:hover, .cta-button:hover, .cta-button1:hover {
     background-color: #feb47b;
 }
 
-/* Parallax Section  */
+/* Parallax Section */
 .parallax-section {
-    background: url('assets/parallax-background.jpg') no-repeat center center fixed;
+    /* background: url('assets/parallax-background.jpg') no-repeat center center fixed; */
     background-size: cover;
     color: white;
-    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
 .abt {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* For the Parallax Background Section */
+/* Footer */
 footer {
     background: linear-gradient(120deg, #004080, #0f2027);
     color: white;
     text-align: center;
-    padding: 10px 10px;
-    position: relative;
-    bottom: 0;
+    padding: 10px;
     width: 100%;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
-footer p,
-footer a {
+footer p, footer a {
     color: white;
     text-decoration: none;
 }
@@ -238,56 +235,62 @@ footer a:hover {
     color: #feb47b;
 }
 
-/* Center content within the footer */
 footer .contact-info {
     margin-top: 10px;
-
 }
 
 footer .contact-info p {
     margin: 5px 0;
 }
 
-
-/* Animation to make the gradient move */
+/* Animations */
 @keyframes gradientBG {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
-
-/* Animations */
 @keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
 
-    50% {
-        transform: scale(1.05);
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 120px;
     }
+    img {
+        max-width: 100%; /* Ensures image scales with the container */
+        height: auto;    /* Maintains aspect ratio */
+        display: block;  /* Removes any unwanted bottom space */
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .btn, .btn1 {
+        justify-content: center;
+    }
+    .project-card, .modal-content {
+        width: 90%;
+    }
+}
 
-    100% {
-        transform: scale(1);
+@media (max-width: 992px) {
+    .header-content nav ul li {
+        margin: 0 5px;
+    }
+    .skills-container {
+        flex-direction: column;
+    }
+    .cta-button, .cta-button1 {
+        padding: 8px 16px;
+        font-size: medium;
     }
 }
