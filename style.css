@@ -310,6 +310,9 @@ footer .contact-info p {
     .profile-pic {
         width: 120px;
     }
+    nav ul li a{
+        display:block;
+    }
     img {
         max-width: 100%; /* Ensures image scales with the container */
         height: auto;    /* Maintains aspect ratio */
